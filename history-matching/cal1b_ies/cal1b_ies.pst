@@ -1,0 +1,37 @@
+pcf version=2
+* control data keyword
+pestmode                                 estimation
+noptmax                                                   25
+svdmode                                 1
+maxsing                                             10000000
+eigthresh                                              1e-07
+eigwrite                               1
+ies_num_reals                                            600
+ies_subset_size                                            5
+ies_subset_how                                        random
+ies_lambda_mults                                0.1,1.0,10.0
+lambda_scale_fac                                0.75,1.0,1.1
+ies_lambda_dec_fac                                      0.75
+ies_lambda_inc_fac                                      10.0
+ies_include_base                                       false
+ies_use_approx                                         false
+ies_reg_factor                                           1.0
+ies_use_empirical_prior                                 true
+ies_use_prior_scaling                                  false
+ies_enforce_bounds                                      true
+ies_autoadaloc                                          true
+ies_num_threads                                           10
+ies_parameter_ensemble                cal1b_ies_init.par.csv
+ies_multimodal_alpha                                     0.1
+* parameter groups external
+pargp_data.csv
+* parameter data external
+par_data.csv
+* observation data external
+obs_data.csv
+* model command line
+run_model.bat
+* model input external
+tplfile_data.csv
+* model output external
+insfile_data.csv

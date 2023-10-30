@@ -1,0 +1,8 @@
+pargpnme,inctyp,derinc,derinclb,forcen,derincmul,dermthd,splitthresh,splitreldiff,splitaction
+k_m,relative,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
+z,absolute,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
+z_aa,absolute,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
+sill_m,relative,0.01,0.0,always_3,2.0,parabolic,1e-05,0.5,smaller
+range_m,relative,0.01,0.0,always_3,2.0,parabolic,1e-05,0.5,smaller
+af_m,relative,0.01,0.0,always_3,2.0,parabolic,1e-05,0.5,smaller
+aa_m,absolute,0.01,0.0,always_3,2.0,parabolic,1e-05,0.5,smaller

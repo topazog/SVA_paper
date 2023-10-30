@@ -1,0 +1,9 @@
+group,mean_change,std_change,num_at_near_lbound,percent_at_near_lbound,num_at_near_ubound,percent_at_near_ubound,initial_cv,current_cv
+k_m,0,0,0,00,0,0,0
+z,2720.53,82.8363,0,00,0,99.1007,3.33175
+z_aa,0,0,0,00,0,0,0
+sill_m,0,0,0,00,0,0,0
+range_m,22.0657,95.9718,0,00,0,0.499752,0.0164918
+af_m,30.1663,92.5991,0,00,0,0.508794,0.0539214
+aa_m,2728.19,91.0137,0,00,0,47.4473,0.150759
+k,0,0,0,00,0,0,0
