@@ -232,9 +232,9 @@ Logical Variables
  END PROCESSING GRIDDATA
     BINARY GRID INFORMATION WILL BE WRITTEN TO:
       UNIT NUMBER: 1026
-      FILE NAME: C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\cal1a_ies\sva_tm.dis.grb
+      FILE NAME: C:\Workspace\opaz0002\Github\SVA_paper\history-matching\cal1a_ies\sva_tm.dis.grb
 
- OPENED C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\cal1a_ies\sva_tm.dis.grb
+ OPENED C:\Workspace\opaz0002\Github\SVA_paper\history-matching\cal1a_ies\sva_tm.dis.grb
  FILE TYPE:DATA(BINARY)   UNIT 1026   STATUS:REPLACE             
  FORMAT:UNFORMATTED            ACCESS:STREAM              
  ACTION:READWRITE           
