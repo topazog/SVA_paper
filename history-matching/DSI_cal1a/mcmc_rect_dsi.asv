@@ -1,0 +1,24 @@
+%% obtain the posterior of standard deviates from DSI
+
+%first we need to defined the number of standard deviates depending on the energy level from SVD
+
+%load realizations
+
+d = log10(readmatrix("case2_ies_500.0.obs.csv"));
+Ne = size(d,2);
+Nd = size(d,1);
+mean_d = repmat(mean(d,2),1,Ne);
+
+X = (d-mean_d)/((Ne-1)^0.5);
+[U,S,V]=svd(X);
+
+sv_squared = diag(S).^2;
+total_energy = sum(sv_squared);
+cum_energy = cumsum(sv_squared);
+
+max_sv = find(cum_energy >= 0.9995 * total_energy, 1);
+
+phi = U*S;
+phi_red = phi(1:end,1:max_sv);
+
+d_est = mean_d+phi_red*randn(max_sv, 1);

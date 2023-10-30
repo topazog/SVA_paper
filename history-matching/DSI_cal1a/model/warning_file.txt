@@ -1,0 +1,3 @@
+-------------- MT-DREAM_{(ZS)} warning file --------------
+MT-DREAM_{(ZS)} PARALLEL: MATLAB pool opened with 14 workers for 5 chains 
+----------- End of MT-DREAM_{(ZS)} warning file ----------

@@ -1,0 +1,32 @@
+  agent  status     runs       successes  failures   abandons   min_runtime    max_runtime    ave_runtime    cum_runtime    alive_time     efficiency     working_folder
+      1  busy       597        596        0          1             3.31100        56.4990        11.3722        6777.82        7942.88       0.853320     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_0
+      2  busy       586        585        0          1             5.18800        36.4820        11.5094        6733.01        7942.51       0.847718     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_1
+      3  busy       581        580        0          1             4.59400        67.1330        11.6448        6753.99        7942.12       0.850401     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_2
+      4  busy       581        580        0          1             4.87400        457.166        12.3215        7146.45        7941.75       0.899858     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_3
+      5  busy       586        585        0          1             4.75000        16.2050        11.4862        6719.40        7941.37       0.846127     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_4
+      6  busy       582        581        0          1             4.73900        16.6520        11.5297        6698.76        7940.93       0.843574     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_5
+      7  busy       581        580        0          1             5.40000        18.0950        11.5625        6706.22        7940.56       0.844553     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_6
+      8  busy       581        580        0          1             4.92800        19.3530        11.5391        6692.68        7940.18       0.842887     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_7
+      9  busy       577        576        0          1             4.86300        17.3180        11.6027        6683.17        7939.81       0.841730     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_8
+     10  busy       585        584        0          1             5.06700        15.7940        11.4731        6700.28        7939.22       0.843946     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_9
+     11  busy       592        591        0          1             4.67400        16.6720        11.3669        6717.83        7938.75       0.846208     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_10
+     12  busy       594        593        0          1             4.74500        15.4140        11.3506        6730.93        7938.07       0.847929     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_11
+     13  busy       592        591        0          1             4.68300        16.4310        11.3774        6724.04        7937.35       0.847140     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_12
+     14  busy       589        588        0          1             4.96900        16.6670        11.4102        6709.18        7936.61       0.845346     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_13
+     15  busy       591        590        0          1             4.86200        15.0180        11.3857        6717.59        7935.85       0.846487     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_14
+     16  busy       591        590        0          1             4.79600        749.404        12.6950        7490.05        7935.04       0.943921     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_15
+     17  busy       587        586        0          1             4.97900        62.1910        11.5462        6766.06        7934.28       0.852763     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_16
+     18  busy       586        585        0          1             4.89900        179.079        11.7525        6875.21        7933.40       0.866616     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_17
+     19  busy       583        582        0          1             4.89900        18.1050        11.4980        6691.81        7932.46       0.843599     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_18
+     20  busy       585        584        0          1             4.82600        17.1680        11.5075        6720.36        7931.54       0.847295     192.168.1.111\\C:\Workspace\opaz0002\Github\Spatial-varying anisotropy\history-matching\worker_19
+ 
+ Note.
+
+ Model runs can be abandoned for three reasons:-
+   (a) for completion by another agent during derivatives calculation;
+   (b) to prevent possible model convergence failure from stalling inversion progress during parameter upgrades;
+   (c) user-termination of execution while a model run is in progress.
+ 
+ Times undertaking abandoned model runs are included in the above efficiency statistics.
+ "Efficiency" should therefore be interpreted in terms of preventing agent idleness rather than
+ model-run parsimony of the inversion process.

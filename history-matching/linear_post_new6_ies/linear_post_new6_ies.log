@@ -1,0 +1,79 @@
+time,elapsed_seconds,message
+19:20:13,5.71e-05,PEST++ performance logger started
+19:20:13,0.0002081,starting to process control file
+19:20:13,0.0053988,finished processing control file
+19:20:13,0.0271657,initializing
+19:20:13,9.74e-05,using glm algorithm
+19:20:13,1.64e-05,using REDSVD for truncated svd solve
+19:20:13,1.58e-05,maxsing: 1005
+19:20:13,1.51e-05,eigthresh:  5e-07
+19:20:13,1.3e-05,initializing localizer
+19:20:13,1.65e-05,not using localization
+19:20:13,1.66e-05,using lambda multipliers: 
+19:20:13,1.65e-05,using lambda scaling factors: 
+19:20:13,1.34e-05,acceptable phi factor:  1.05
+19:20:13,1.36e-05,lambda increase factor:  10
+19:20:13,1.34e-05,lambda decrease factor:  0.75
+19:20:13,1.38e-05,max run fail:  1
+19:20:13,1.9e-05,initializing prior parameter covariance matrix
+19:20:13,7.1e-06,initializing parcov
+19:20:13,0.0001603,parcov loaded  from parameter bounds, using par_sigma_range 4
+19:20:13,0.0002921,initializing observation noise covariance matrix
+19:20:13,0.0042237,obscov loaded  from observation weights
+19:20:13,0.0006145,using reg_factor:  0
+19:20:13,1.17e-05,processing par csv post_param_samp1000.csv
+19:20:13,1.57e-05,loading par ensemble from csv file post_param_samp1000.csv
+19:20:13,0.110501,not using prior parameter covariance matrix scaling
+19:20:13,3.46e-05,initializing no-noise observation ensemble of :  1000
+19:20:13,0.0127341,setting weights ensemble from control file weights
+19:20:14,1.20198,saved weight ensemble to  linear_post_new6_ies.weights.csv
+19:20:14,2.41e-05,checking for denormal values in weights ensemble
+19:20:14,0.0028504,resetting obs + noise ensemble real names to parameter ensemble real names
+19:20:14,0.0007155,checking for denormal values in pe
+19:20:14,0.214428,saved initial parameter ensemble to  linear_post_new6_ies.0.par.csv
+19:20:14,3.15e-05,checking for denormal values in obs + noise ensemble
+19:20:19,4.50984,saved obs+noise observation ensemble (obsval + noise realizations) to  linear_post_new6_ies.obs+noise.csv
+19:20:19,4.06e-05,using subset in lambda testing, number of realizations used in subset testing:  4
+19:20:19,1.94e-05,subset how:  RANDOM
+19:20:19,0.0113985,centering on ensemble mean vector
+19:20:19,2.33e-05,running initial ensemble
+19:20:19,1.91e-05,running initial ensemble of size 1000
+19:20:19,2.84e-05,queuing 1000 runs
+19:20:19,0.0826906,making runs
+19:30:27,607.673,processing runs
+19:30:27,0.263021,the following par:obs realization runs failed: 112:112,141:141,222:222,247:247,258:258,259:259,331:331,339:339,342:342,375:375,428:428,491:491,678:678,701:701,702:702,724:724,741:741,830:830,
+19:30:27,6.32e-05,dropping failed realizations
+19:30:27,0.0251277,the following 18 par:obs realization runs failed during evaluation of the initial parameter ensemble:
+112:112
+141:141
+222:222
+247:247
+258:258
+259:259
+331:331
+339:339
+342:342
+375:375
+428:428
+491:491
+678:678
+701:701
+702:702
+724:724
+741:741
+830:830
+
+19:30:31,4.44059,saved initial obs ensemble to linear_post_new6_ies.0.obs.csv
+19:30:31,0.0008165,calc pre-drop phi
+19:30:31,0.0498205,pre-drop initial phi summary
+19:30:31,0.0037634,checking for prior-data conflict...
+19:30:31,0.0097175,WARNING: 386 non-zero weighted observations are in conflict with the prior simulated ensemble.
+
+19:30:31,0.0022054,  WARNING: Prior-data conflict detected.  Continuing with IES parameter
+           adjustment will likely result in parameter and forecast bias.
+           Consider using 'ies_drop_conflicts' as a quick fix.
+19:30:33,1.37019,saved adjusted weight ensemble to  linear_post_new6_ies.adjusted.weights.csv
+19:30:33,2.28e-05,calc initial phi
+19:30:33,0.0459527,initial phi summary
+19:30:33,0.0115798,current lambda: 1
+19:30:33,2.65e-05,initialization complete
