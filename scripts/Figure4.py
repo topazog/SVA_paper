@@ -41,19 +41,21 @@ ax[2].axvline(x=0.5,color='black',linestyle='dashed')
 ax[2].text(0.53, 1.5, 'True range = 0.5', rotation=90,size=8)
 ax[2].set_xlabel('a value',fontsize=10)
 ax[2].set_xlim([0,2])
+ax[2].set_ylabel('density',fontsize=10)
 
 ax[1].hist(af_m,bins=50,color='grey',density=True)
 ax[1].tick_params(axis='both', which='major', labelsize=8)
 ax[1].axvline(x=5.0,color='black',linestyle='dashed')
 ax[1].text(5.3, 0.15, 'True anisotropy ratio = 5.0', rotation=90,size=8)
 ax[1].set_xlabel('anisotropy ratio',fontsize=10)
-
+ax[1].set_ylabel('density',fontsize=10)
 
 ax[0].hist(aa_m,bins=50,color='grey',density=True)
 ax[0].tick_params(axis='both', which='major', labelsize=8)
 ax[0].axvline(x=np.pi*45/180,color='black',linestyle='dashed')
 ax[0].text(np.pi*45/180+0.1, 0.3, 'True anisotropy angle = '+str(np.round(np.pi*45/180,2)), rotation=90,size=8)
 ax[0].set_xlabel('anisotropy angle (radians)',fontsize=10)
+ax[0].set_ylabel('density',fontsize=10)
 
 fig.tight_layout()
 

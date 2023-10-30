@@ -53,7 +53,7 @@ Par_info.min =	-5*ones(1,max_sv);  % For boundary handling
 Par_info.max =	5*ones(1,max_sv);  % For boundary handling
 
 %% Define name of function (.m file) for posterior exploration
-Func_name = 'MODEL2';
+Func_name = 'MODEL';
 
 %% Optional settings
 options.parallel = 'yes';              % Run chains in parallel
