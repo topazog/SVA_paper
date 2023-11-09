@@ -89,7 +89,8 @@ for k in range(10):
     obs_data_sorted[300*k+100:300*(k+1)]=obs_data['obsval'][1000+200*k:1000+200*(k+1)]
 
 
-fig, ax = plt.subplots(2,2,figsize=(5,5),dpi=300)
+cm = 1/2.54
+fig, ax = plt.subplots(2,2,figsize=(18*cm,18*cm),dpi=600)
 
 i=0
 j=0
@@ -117,11 +118,14 @@ for l,k in enumerate(k_sel):
     ax[i][j].axvline(x=200.0,linestyle='dashed',color='grey')
     ax[i][j].set_xlabel('time',fontsize=7)
     ax[i][j].set_ylabel('depletion',fontsize=7)
-
+    ax[i][j].text(4,0.95,'history-matching',fontsize=7)
+    ax[i][j].text(4,0.92,'period',fontsize=7)
+    ax[i][j].text(210,0.95,'predictive',fontsize=7)
+    ax[i][j].text(210,0.92,'period',fontsize=7)
     j+=1
     if j==2:
         i+=1
         j=0
 fig.tight_layout()
-fig.savefig(os.path.join(figure_dir,'Figure11.pdf'),dpi='figure',format='pdf')
+fig.savefig(os.path.join(figure_dir,'Figure11.jpg'),dpi='figure',format='jpeg')
 plt.close()

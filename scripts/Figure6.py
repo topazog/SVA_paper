@@ -87,8 +87,8 @@ niter = len(phi_t.columns)
 sim_df = pd.read_csv(os.path.join(iesfiles_dir,ies_run_name+'.{0}.par.csv'.format(str(niter-1))))
 
 ireals = [0,253,44,109]
-
-fig, ax = plt.subplots(2,2,figsize=(10,10),dpi=300)
+cm = 1/2.54
+fig, ax = plt.subplots(2,2,figsize=(18*cm,18*cm),dpi=600)
 i=0
 j=0
 for ireal in ireals:
@@ -137,16 +137,16 @@ for ireal in ireals:
     mapview = flopy.plot.PlotMapView(model=tmdl,layer=0,ax=ax[i,j])
     k_map = mapview.plot_array(a=k,cmap='jet_r',alpha=0.35,vmin=-2,vmax=2)
     levels = np.array([0.1,0.5,0.9,0.99])
-    mapview.contour_array(a=conc_mf6[len(time)-1][0], levels=levels,colors='black',alpha= 0.9,linewidths=0.5)
     mapview.plot_bc('wel1',wel1,color='red', kper=1)
     mapview.plot_bc('wel1',wel1,color='magenta', kper=0)
     mapview.plot_bc('wel2',wel2,color='black')
+    mapview.contour_array(a=conc_mf6[len(time)-1][0], levels=levels,colors='black',alpha= 0.9,linewidths=0.5)
 
     for k in range(len(obs)-3,len(obs)):
         label = 'pw'+str(k+1)
         y_label = obs[k][2]
         x_label = obs[k][1]
-        ax[i,j].text(x_label,y_label,label, ha='center',va='top')
+        ax[i,j].text(x_label,y_label-0.02,label, ha='center',va='top')
 
     label = 'pw'+str(3+1)
     y_label = obs[3][2]
@@ -154,10 +154,13 @@ for ireal in ireals:
     ax[i,j].text(x_label,y_label,label, ha='center',va='top')
 
     ax[i,j].set_aspect('equal', 'box')
+    ax[i,j].set_xlabel('X',fontsize=7)
+    ax[i,j].set_ylabel('Y',fontsize=7)
+    ax[i,j].tick_params(labelsize=7)
 
     j+=1
     if j==2:
         j=0
         i=1
-fig.savefig(os.path.join(figure_dir,'Figure6.pdf'),dpi='figure',format='pdf')
+fig.savefig(os.path.join(figure_dir,'Figure6.jpg'),dpi='figure',format='jpeg')
 plt.close()

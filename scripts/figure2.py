@@ -134,7 +134,8 @@ for i in range(nrow):
                 num+= (sd_m * np.exp(-2.*(d/a_z)**2) *(4/((a_z)**2 * 3.1416))**(0.5))*z_m[k,l]
         m1[i,j]=num+np.log10(k_m)
 
-fig, ax = plt.subplots(1,2,dpi=200,figsize=(10,5))
+cm = 1/2.54
+fig, ax = plt.subplots(1,2,dpi=600,figsize=(18*cm,9*cm))
 #ax[0].set_aspect('equal', 'box')
 k_map = ax[0].imshow(m1,cmap='jet_r',vmin=-2,vmax=2,alpha=0.55)
 k_map = ax[1].imshow(m2,cmap='jet_r',vmin=-2,vmax=2,alpha=0.55)
@@ -146,5 +147,5 @@ ax[0].text(0,-2,'a)')
 ax[1].text(0,-2,'b)')
 
 #fig.tight_layout()
-fig.savefig(os.path.join(figure_dir,'Figure2.pdf'),format='pdf')
+fig.savefig(os.path.join(figure_dir,'Figure2.jpg'),format='jpeg')
 plt.close(fig)

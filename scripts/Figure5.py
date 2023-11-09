@@ -40,28 +40,27 @@ mask = ~np.isnan(phi_t_values)
 filtered_data = [d[m] for d, m in zip(phi_t_values.T, mask.T)]
 
 phi_df = pd.read_csv(os.path.join(iesfiles_dir,phi_meas_filename))
-
-fig, ax = plt.subplots(figsize=(10,3),dpi=300)
+cm = 1/2.54
+fig, ax = plt.subplots(figsize=(18*cm,6.0*cm),dpi=600)
 ax.boxplot(filtered_data,positions=np.array(phi_df['total_runs']),widths=100)
-x_ticks = np.arange(0,12000,2000)
-x_ticks_labels = np.arange(0,12000,2000)
+x_ticks = np.arange(0,12100,2000)
+x_ticks_labels = np.arange(0,14000,2000)
 ax.set_xticks(x_ticks)
-ax.set_xticklabels(x_ticks_labels)
+ax.set_xticklabels(x_ticks_labels,fontsize=7)
 ax.set_xlim([0,10000])
 
+
 ax.axhline(y=1000,linestyle='dashed',color='grey')
-ax.text(100,1200,'target measurement objective function',fontsize=8)
+ax.text(100,500,'target measurement objective function',fontsize=7)
 
 ax.set_yscale('log')
-
-#y_ticks = np.arange(0,10,1)
-#y_ticks_labels = np.arange(0,10,1)
-#ax.set_yticks(y_ticks)
-#ax.set_yticklabels(y_ticks_labels)
-ax.set_ylim([500,10000000])
-ax.set_xlabel('Model runs')
-ax.set_ylabel('log10(phi)')
+#ax.grid(which='both',axis='y')
+ax.set_yticks([1000,10000,100000,1000000,10000000])
+ax.tick_params(axis='both', which='major', labelsize=7)
+ax.set_ylim([400,10000000])
+ax.set_xlabel('Model runs',fontsize=7)
+ax.set_ylabel('log10(phi)',fontsize=7)
 fig.tight_layout()
-fig.savefig(os.path.join(figure_dir,'Figure5.pdf'),dpi='figure',format='pdf')
+fig.savefig(os.path.join(figure_dir,'Figure5.jpg'),dpi='figure',format='jpeg')
 
 plt.close()

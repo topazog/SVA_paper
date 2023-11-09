@@ -105,7 +105,8 @@ obs_data_df = pd.DataFrame(obs_data, columns=columns)
 fpth = os.path.join(pest_files_dir,tmodelname+'_.obs.csv')
 cal_con_sim = pd.read_csv(fpth,index_col=0)
 
-fig, ax = plt.subplots(2,2,figsize=(5,5),dpi=300)
+cm = 1/2.54
+fig, ax = plt.subplots(2,2,figsize=(18*cm,18*cm),dpi=600)
 
 i=0
 j=0
@@ -135,12 +136,16 @@ for k,well in enumerate(well_list):
     ax[i][j].set_title(well_list_names[k],fontsize=7)
     ax[i][j].set_xlabel('time',fontsize=7)
     ax[i][j].set_ylabel('depletion',fontsize=7)
+    ax[i][j].text(4,0.95,'history-matching',fontsize=7)
+    ax[i][j].text(4,0.92,'period',fontsize=7)
+    ax[i][j].text(210,0.95,'predictive',fontsize=7)
+    ax[i][j].text(210,0.92,'period',fontsize=7)
     j+=1
     if j==2:
         i+=1
         j=0
 fig.tight_layout()
-fig.savefig(os.path.join(figure_dir,'Figure10.pdf'),dpi='figure',format='pdf')
+fig.savefig(os.path.join(figure_dir,'Figure10.jpg'),dpi='figure',format='jpeg')
 plt.close()
 
 

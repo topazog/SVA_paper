@@ -71,11 +71,12 @@ for value in obs_dict.values():
         obs.append([ivalue[0],x_coord,y_coord,ivalue[2][0]+1])
         obs_rcl.append([ivalue[2][0],ivalue[2][1],ivalue[2][2]])
 
-fig, ax = plt.subplots(1,2,dpi=200,figsize=(10,5))
+cm = 1/2.54
+fig, ax = plt.subplots(1,2,dpi=600,figsize=(18*cm,9*cm))
 ax[0].set_aspect('equal', 'box')
-ax[0].tick_params(labelsize=8)
-ax[0].set_xlabel('x')
-ax[0].set_ylabel('y')
+ax[0].tick_params(labelsize=7)
+ax[0].set_xlabel('X',fontsize=7)
+ax[0].set_ylabel('Y',fontsize=7)
 ax[0].text(0,1.05,'a)')
 #ax.set_xticks([])
 #ax.set_yticks([])
@@ -94,7 +95,7 @@ for i in range(len(obs)):
     label = 'pw'+str(i+1)
     y_label = obs[i][2]
     x_label = obs[i][1]
-    ax[0].text(x_label,y_label,label, ha='center',va='top',fontsize=7)
+    ax[0].text(x_label,y_label-0.02,label, ha='center',va='top',fontsize=7)
 
 #cbar = fig.colorbar(k_map,orientation="vertical",shrink=0.6)
 #cbar.set_label("True log10K",fontsize=5)
@@ -104,10 +105,10 @@ for i in range(len(obs)):
 #plt.close(fig)
 
 #fig, ax = plt.subplots(1,1,dpi=200,figsize=(5,5))
-ax[1].tick_params(labelsize=8)
+ax[1].tick_params(labelsize=7)
 ax[1].text(-20,1.1,'b)')
-ax[1].text(0,-0.03,'history-matching period',fontsize=7)
-ax[1].text(210,-0.03,'predictive period',fontsize=7)
+ax[1].text(-18,-0.03,'history-matching period',fontsize=5)
+ax[1].text(210,-0.03,'predictive period',fontsize=5)
 ax[1].axvline(x=200.0,linestyle='dashed',color='grey')
 sel_wells = [3,7,8,9]
 for i in range(len(obs_rcl)):
@@ -116,9 +117,9 @@ for i in range(len(obs_rcl)):
         ax[1].plot(df.index,df['mw'+str(i+1)],label=label,linewidth=2)
     else:
         ax[1].plot(df.index,df['mw'+str(i+1)],label=label,linewidth=0.7)
-ax[1].set_xlabel('Time units')
-ax[1].set_ylabel('Brine depletion')
-ax[1].legend(loc='upper left',fontsize=6)
+ax[1].set_xlabel('time',fontsize=7)
+ax[1].set_ylabel('depletion',fontsize=7)
+ax[1].legend(loc='upper right',fontsize=6,bbox_to_anchor=(1.25, 1.01))
 fig.tight_layout()
-fig.savefig(os.path.join(figure_dir,'Figure3.pdf'),format='pdf')
+fig.savefig(os.path.join(figure_dir,'Figure3.jpg'),format='jpeg')
 plt.close(fig)

@@ -65,7 +65,8 @@ npf = fmdl.get_package("npf")
 wel1 = fmdl.get_package("wel1")
 wel2 = fmdl.get_package("wel2")
 
-fig, ax = plt.subplots(1,1,dpi=200,figsize=(5,5))
+cm = 1/2.54
+fig, ax = plt.subplots(figsize=(8.5*cm,8.5*cm),dpi=600)
 ax.set_aspect('equal', 'box')
 #ax.set_xticks([])
 #ax.set_yticks([])
@@ -93,11 +94,13 @@ for i in well_lst:
     label = 'pw'+str(i+1)
     y_label = obs[i][2]
     x_label = obs[i][1]
-    ax.text(x_label,y_label,label, ha='center',va='top')
+    ax.text(x_label,y_label-0.02,label, ha='center',va='top',fontsize=7)
 
 #cbar = fig.colorbar(k_map,orientation="vertical",shrink=0.6)
 #cbar.set_label("Cal log10K",fontsize=7)
-#cbar.ax.tick_params(labelsize=7)
+ax.tick_params(labelsize=7)
+ax.set_xlabel('X',fontsize=7)
+ax.set_ylabel('Y',fontsize=7)
 fig.tight_layout()
-fig.savefig(os.path.join(figure_dir,'Figure9.pdf'),format='pdf')
+fig.savefig(os.path.join(figure_dir,'Figure9.jpg'),format='jpeg')
 plt.close(fig)
